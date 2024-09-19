@@ -1,8 +1,10 @@
+@import '../../styles/variables.scss';
+
 .header {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #213547;
+  background-color: $rose-900;
   transition: height 0.3s ease;
   position: fixed;
   right: 0;
