@@ -1,7 +1,7 @@
 
 
 
-import './App.css'
+import "./index.scss"
 import Header from './components/Header'
 
 function App() {

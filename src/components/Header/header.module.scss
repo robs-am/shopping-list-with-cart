@@ -15,6 +15,14 @@
   justify-content: space-between;
   z-index: 1;
 
+  h1 {
+    font-size: 1.5em;
+    color: white;
+    font-family: $font-family-body;
+    font-weight: $font-weight-bold;
+    padding: 1em;
+  }
+
   .logo {
     height: 6em;
     padding: 1.5em;
