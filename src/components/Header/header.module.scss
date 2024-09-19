@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #213547;
+  transition: height 0.3s ease;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  backdrop-filter: saturate(180%) blur(20px);
+  justify-content: space-between;
+  z-index: 1;
+
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    transform: scaleX(-1);
+
+
+    &:hover {
+      filter: drop-shadow(0 0 2em #646cffaa);
+    }
+  }
+}
