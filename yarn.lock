@@ -1064,6 +1064,24 @@ gensync@^1.0.0-beta.2:
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
+get-client-window-height@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/get-client-window-height/-/get-client-window-height-1.0.0.tgz#033347c95b4a082b0a4f9e5aedabfedd413a6730"
+  integrity sha512-a6hSGyrXbA36y+SUvcwH3FMILqpuPeQrHy6efgDQPxM1mnuFvRSgvG2AAhnTM5ynMcQjuXmGfhHqVaCA5S3Abw==
+
+get-client-window-size@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/get-client-window-size/-/get-client-window-size-1.0.0.tgz#807227be8224d6aeb08a08b273854306ce2eb855"
+  integrity sha512-MVQJ7y0+bJHARzXL5SwprF0uKLrRZ8jK5I15awlDA2wbZ4NcocG5BKz6+4xywOdxpVuEfIDYTtTHsaa95/QNBQ==
+  dependencies:
+    get-client-window-height "^1.0.0"
+    get-client-window-width "^1.0.0"
+
+get-client-window-width@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/get-client-window-width/-/get-client-window-width-1.0.0.tgz#0c4b31781ffc610adf0ff6de58f1bc6ff529a647"
+  integrity sha512-xakeAOVT5NE4kpFESx/Ttg+JW71QCwJRgSDwQbCfjLstzOR4w/5teZzEKd7npYadpElZDJILoZx4kG7US4aOKg==
+
 glob-parent@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -1388,6 +1406,11 @@ react-router@6.26.2:
   dependencies:
     "@remix-run/router" "1.19.2"
 
+react-use-event-listener@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-use-event-listener/-/react-use-event-listener-1.1.1.tgz#d15d5f834f3135a439cbd8648b569a970b4a3e70"
+  integrity sha512-BD9i2B4FzAP9jYYPgLsjw8BwIrVHlA8jdMsbuwcHmaO81LOTVhM3XIAwwkPoHubI/gCL5o6ykjon53+ENnpNPg==
+
 react@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
@@ -1573,6 +1596,15 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-device-detect@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/use-device-detect/-/use-device-detect-1.0.2.tgz#64f95930eab52571f9b65c371cc5eaa7e45a3068"
+  integrity sha512-V0V60MwhsCE2YL52uWSIW+thjYS4INTEzXN1uEkjUlQ97ESdLVB7P/VMDjsiMp/2zk34y90ucs2ra54m3qNuzQ==
+  dependencies:
+    get-client-window-size "^1.0.0"
+    is-number "^7.0.0"
+    react-use-event-listener "^1.1.1"
 
 use-local-storage-state@^19.4.0:
   version "19.4.0"
