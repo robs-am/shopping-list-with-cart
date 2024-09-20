@@ -3,15 +3,16 @@
 
 import "./index.scss"
 import CartWidget from "./components/CartWidget"
-/* import Header from './components/Header' */
+import Header from './components/Header'
+import Product from "./components/Product"
 
 function App() {
 
 
   return (
     <>
- {/*     <Header /> */}
-      <h1>Vite + React</h1>
+     <Header />
+      <Product />
      <CartWidget productsCount={0} />
 
     </>

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import classes from './header.module.scss';
 
-import CartWidget from '../CartWidget'; 
+
 
 const Header: React.FC = () => {
-  const productsCount = 0; 
+
 
   return (
     <header className={classes.header}>
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <div>
-        <CartWidget productsCount={productsCount} />
+ 
       </div>
     </header>
   );
