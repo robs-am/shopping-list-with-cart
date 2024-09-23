@@ -1,5 +1,12 @@
 @import '../../styles/variables.scss';
 
+h2 {
+       
+  color: $red;
+  font-weight: $font-weight-bold
+
+}
+
 .container {
 
   display: flex;
@@ -15,7 +22,7 @@
     outline: 1px solid white;
   }
 
-
+  
   .shoppingCart {
     height: 3em;
     padding: 1.5rem .4rem;
