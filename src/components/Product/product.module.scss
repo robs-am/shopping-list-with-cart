@@ -1,62 +1,139 @@
 @import '../../styles/variables.scss';
 
-
-
 .productList {
+  background-color: $rose-50;
 
-background-color: $rose-50;
+  .productTitle {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    color: $rose-900;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 
-.productTitle {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
-  color: $rose-900;
-}
-.products {
-  display: flex;
-  flex-wrap: wrap; 
-  gap:15px;
+    .productCard {
+      position: relative;
+      .productImage {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
 
-  .productCard {
-  
-    .productImage {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px; 
+      h2 {
+        font-size: 1.5rem;
+
+        color: $rose-900;
+      }
+
+      p {
+        margin: 5px 0;
+        color: $rose-400;
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: $font-weight-bold;
+        color: $red;
+      }
+      
     }
-
-    h2 {
-      font-size: 1.5rem; 
-
-      color: $rose-900
-    }
-
-    p {
-      margin: 5px 0;
-      color: $rose-400; 
-    }
-
-  
   }
 }
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+
+  button {
+    background-color: #fff;
+    color: $red;
+    border: 1px solid $red;
+   
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 5px;
+    flex-shrink: 0; /* Garante que o botão não encolha */
+  }
+
+  span {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    text-align: center;
+    min-width: 30px; /* Define uma largura mínima para o número */
+    display: inline-block; /* Garante que o span seja tratado como bloco inline */
+  }
 }
 
+.addToCartButton {
+  position: absolute; // Mantém o posicionamento absoluto
+  bottom: 40%; // Posiciona 40% acima da parte inferior da imagem
+  left: 50%; // Centraliza horizontalmente
+  transform: translateX(-50%); // Ajuste fino para garantir o centramento
+  background-color: white;
+  color: $red; // Mantém a cor original
+  
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid $red; // Mantém a borda vermelha
+  width:150px;
+}
+
+.addToCartButton:hover {
+  background: $red; // Cor de fundo ao passar o mouse
+  color: #fff; // Cor do texto ao passar o mouse
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  position: absolute; // Mantém o posicionamento absoluto
+  bottom: 40%; // Ajuste para posicionar acima do botão "Add to Cart"
+  left: 50%; // Centraliza horizontalmente
+  transform: translateX(-50%); // Ajuste fino para garantir o centramento
+
+  button {
+    background-color:white; // Cor original do botão
+    color: $red;
+    border:1px solid $red;
+    border: 1px solid $red;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 5px;
+    flex-shrink: 0; // Garante que o botão não encolha
+  }
+
+  span {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    text-align: center;
+    min-width: 30px; // Define uma largura mínima para o número
+    display: inline-block; // Garante que o span seja tratado como bloco inline
+  }
+}
 
 
 @media (min-width: 1024px) {
   .productCard {
-    flex: 0 0 calc(33.33% - 10px); 
+    flex: 0 0 calc(33.33% - 10px);
+  }
+
+  .productCard .addToCartButton, .quantityControls { // Adiciona a classe para aumentar a especificidade
+    position: absolute;
+    bottom: 17%; // O estilo deve ser aplicado aqui
   }
 }
 
-
 @media (max-width: 768px) {
   .productCard {
-    flex: 0 0 calc(50% - 10px); 
+    flex: 0 0 calc(50% - 10px);
   }
 }
 
 @media (max-width: 480px) {
   .productCard {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
   }
 }
