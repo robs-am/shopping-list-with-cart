@@ -36,4 +36,45 @@ h2 {
     top: 38px;
     color: orange;
   }
+
+  .cartDetails {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cartItemName {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .cartItemQuantity {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .cartItemPriceUnit {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .cartItemTotal {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .cartTotal {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: bold;
+  }
+  
 }

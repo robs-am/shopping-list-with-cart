@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode } from 'react';
 
-// Definindo o tipo do produto no carrinho
+
 interface CartProduct {
   id: number;
   name: string;
@@ -23,14 +23,14 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const addToCart = (product: CartProduct) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find(item => item.id === product.id);
-      
+
       if (existingProduct) {
         // Se o produto já estiver no carrinho, aumenta a quantidade
         return prevCart.map(item =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-      
+
       // Se o produto não estiver no carrinho, adiciona-o
       return [...prevCart, product];
     });
