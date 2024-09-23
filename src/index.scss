@@ -26,8 +26,9 @@
 .productPage {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 10px;
+  gap: 2rem;
   align-items: start;
+  margin:4rem;
 }
 a {
   font-weight: 500;

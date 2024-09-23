@@ -46,9 +46,9 @@ const Product: React.FC = () => {
               className={classes.productImage}
             />
           </picture>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <p>${product.price.toFixed(2)}</p>
+          <p>{product.name}</p>
+          <h2>{product.description}</h2>
+          <span>${product.price.toFixed(2)}</span>
         </div>
       ))}
     </div>

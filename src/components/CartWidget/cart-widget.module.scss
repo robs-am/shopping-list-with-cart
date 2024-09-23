@@ -1,13 +1,15 @@
+@import '../../styles/variables.scss';
+
 .container {
-  margin: 1rem;
-  padding: 0 1rem;
+
   display: flex;
   border: none;
   background: none;
   cursor: pointer;
   align-items: center;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: flex-end;
+  background-color: #fff;
 
   &:hover {
     outline: 1px solid white;

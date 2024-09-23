@@ -8,12 +8,13 @@ background-color: $rose-50;
 
 .productTitle {
   font-size: 3rem;
- 
+  margin-bottom: 2.5rem;
   color: $rose-900;
 }
 .products {
   display: flex;
   flex-wrap: wrap; 
+  gap:15px;
 
   .productCard {
   
@@ -25,11 +26,19 @@ background-color: $rose-50;
 
     h2 {
       font-size: 1.5rem; 
-      margin: 10px 0; 
+
+      color: $rose-900
     }
 
     p {
-      margin: 5px 0; 
+      margin: 5px 0;
+      color: $rose-400; 
+    }
+
+    span {
+     
+      color: $red;
+      font-weight: $font-weight-bold
     }
   }
 }

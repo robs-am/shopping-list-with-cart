@@ -17,7 +17,7 @@ const CartWidget: React.FC<CartWidgetProps> = ({ productsCount }) => {
 
   return (
     <button className={classes.container} onClick={navigateToCart}>
-      <span className={classes.productsCount}>{productsCount}</span>
+      <span className={classes.productsCount}>Your Cart ({productsCount})</span>
       {/* <img src={shoppingCart} className={classes.shoppingCart} alt="Go to Cart" /> */}
     </button>
   );
