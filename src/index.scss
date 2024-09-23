@@ -2,13 +2,14 @@
 
 
 :root {
+
   font-family : $font-family-body;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: $rose-50;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,8 +17,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
 
-
+.productPage {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
 a {
   font-weight: 500;
   color: #646cff;

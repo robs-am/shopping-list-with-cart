@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+
+
+.productList {
+
+background-color: $rose-50;
+
+.productTitle {
+  font-size: 3rem;
+ 
+  color: $rose-900;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap; 
+
+  .productCard {
+  
+    .productImage {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px; 
+    }
+
+    h2 {
+      font-size: 1.5rem; 
+      margin: 10px 0; 
+    }
+
+    p {
+      margin: 5px 0; 
+    }
+  }
+}
+}
+
+
+
+@media (min-width: 1024px) {
+  .productCard {
+    flex: 0 0 calc(33.33% - 10px); 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .productCard {
+    flex: 0 0 calc(50% - 10px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    flex: 0 0 100%; 
+  }
+}

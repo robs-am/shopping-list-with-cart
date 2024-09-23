@@ -1,19 +1,15 @@
-
-
-
 import "./index.scss"
 import CartWidget from "./components/CartWidget"
-import Header from './components/Header'
 import Product from "./components/Product"
 
 function App() {
 
-
   return (
     <>
-     <Header />
+    <section className="productPage">
       <Product />
      <CartWidget productsCount={0} />
+     </section>
 
     </>
   )

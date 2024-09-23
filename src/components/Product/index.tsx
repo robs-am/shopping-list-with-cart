@@ -25,7 +25,10 @@ const Product: React.FC = () => {
   }, []);
 
   return (
+    <div className={classes.productList}>
+    <h1 className={classes.productTitle}>Deserts</h1>
     <div className={classes.products}>
+     
       {products.map((product) => (
         <div key={product.id} className={classes.productCard}>
           <picture>
@@ -48,6 +51,7 @@ const Product: React.FC = () => {
           <p>${product.price.toFixed(2)}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 };
