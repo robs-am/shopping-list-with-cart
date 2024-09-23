@@ -54,47 +54,47 @@
     font-size: 1rem;
     cursor: pointer;
     margin: 0 5px;
-    flex-shrink: 0; /* Garante que o botão não encolha */
+    flex-shrink: 0; 
   }
 
   span {
     font-size: 1.2rem;
     margin: 0 10px;
     text-align: center;
-    min-width: 30px; /* Define uma largura mínima para o número */
-    display: inline-block; /* Garante que o span seja tratado como bloco inline */
+    min-width: 30px; 
+    display: inline-block; 
   }
 }
 
 .addToCartButton {
-  position: absolute; // Mantém o posicionamento absoluto
-  bottom: 40%; // Posiciona 40% acima da parte inferior da imagem
-  left: 50%; // Centraliza horizontalmente
-  transform: translateX(-50%); // Ajuste fino para garantir o centramento
+  position: absolute; 
+  bottom: 40%; 
+  left: 50%; 
+  transform: translateX(-50%);
   background-color: white;
-  color: $red; // Mantém a cor original
+  color: $red; 
   
   cursor: pointer;
   font-size: 1rem;
-  border: 1px solid $red; // Mantém a borda vermelha
+  border: 1px solid $red; 
   width:150px;
 }
 
 .addToCartButton:hover {
-  background: $red; // Cor de fundo ao passar o mouse
-  color: #fff; // Cor do texto ao passar o mouse
+  background: $red; 
+  color: #fff; 
 }
 
 .quantityControls {
   display: flex;
   align-items: center;
-  position: absolute; // Mantém o posicionamento absoluto
-  bottom: 40%; // Ajuste para posicionar acima do botão "Add to Cart"
-  left: 50%; // Centraliza horizontalmente
-  transform: translateX(-50%); // Ajuste fino para garantir o centramento
+  position: absolute; 
+  bottom: 40%;
+  left: 50%; 
+  transform: translateX(-50%); 
 
   button {
-    background-color:white; // Cor original do botão
+    background-color:white; 
     color: $red;
     border:1px solid $red;
     border: 1px solid $red;
@@ -102,15 +102,15 @@
     font-size: 1rem;
     cursor: pointer;
     margin: 0 5px;
-    flex-shrink: 0; // Garante que o botão não encolha
+    flex-shrink: 0; 
   }
 
   span {
     font-size: 1.2rem;
     margin: 0 10px;
     text-align: center;
-    min-width: 30px; // Define uma largura mínima para o número
-    display: inline-block; // Garante que o span seja tratado como bloco inline
+    min-width: 30px; 
+    display: inline-block; 
   }
 }
 
@@ -120,9 +120,9 @@
     flex: 0 0 calc(33.33% - 10px);
   }
 
-  .productCard .addToCartButton, .quantityControls { // Adiciona a classe para aumentar a especificidade
+  .productCard .addToCartButton, .quantityControls { 
     position: absolute;
-    bottom: 17%; // O estilo deve ser aplicado aqui
+    bottom: 17%; 
   }
 }
 
