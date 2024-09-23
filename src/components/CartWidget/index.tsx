@@ -1,25 +1,26 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
-/* import shoppingCart from '../../assets/shopping-cart.svg'; */
-import classes from './cart-widget.module.scss';
-
-interface CartWidgetProps {
-  productsCount: number;
-}
-
-const CartWidget: React.FC<CartWidgetProps> = ({ productsCount }) => {
-  const navigate = useNavigate();
-
-  const navigateToCart = () => {
-    navigate('/cart');
-  };
+const CartWidget = () => {
+  const { cart, removeFromCart } = useCart();
 
   return (
-    <button className={classes.container} onClick={navigateToCart}>
-      <span className={classes.productsCount}>Your Cart ({productsCount})</span>
-      {/* <img src={shoppingCart} className={classes.shoppingCart} alt="Go to Cart" /> */}
-    </button>
+    <div>
+      <h2>Cart</h2>
+      {cart.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
+        cart.map((item) => (
+          <div key={item.id}>
+            <p>{item.name}</p>
+            <p>Quantity: {item.quantity}</p>
+            <p>Price: ${item.price.toFixed(2)}</p>
+            <button onClick={() => removeFromCart(item.id)}>
+              Remove from Cart
+            </button>
+          </div>
+        ))
+      )}
+    </div>
   );
 };
 

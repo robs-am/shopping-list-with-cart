@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import classes from './Product.module.scss'; // Supondo que você tenha um arquivo de estilos
+import { useCart } from "../../context/CartContext"; 
+import classes from './Product.module.scss'; 
 
 interface Product {
   id: number;
@@ -15,10 +16,10 @@ interface Product {
 
 const Product: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const { addToCart } = useCart(); 
 
-  // Fetch dos dados do JSON
   useEffect(() => {
-    fetch('/data/products.json') // Caminho do arquivo JSON na pasta public
+    fetch('/data/products.json') 
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Erro ao buscar dados:', error));
@@ -26,32 +27,39 @@ const Product: React.FC = () => {
 
   return (
     <div className={classes.productList}>
-    <h1 className={classes.productTitle}>Deserts</h1>
-    <div className={classes.products}>
-     
-      {products.map((product) => (
-        <div key={product.id} className={classes.productCard}>
-          <picture>
-            <source
-              media="(min-width: 1024px)" // Para telas de desktop
-              srcSet={product.images.desktop}
-            />
-            <source
-              media="(min-width: 768px)" // Para telas de tablet
-              srcSet={product.images.tablet}
-            />
-            <img
-              src={product.images.mobile} // Fallback para telas mobile
-              alt={product.name}
-              className={classes.productImage}
-            />
-          </picture>
-          <p>{product.name}</p>
-          <h2>{product.description}</h2>
-          <span>${product.price.toFixed(2)}</span>
-        </div>
-      ))}
-    </div>
+      <h1 className={classes.productTitle}>Deserts</h1>
+      <div className={classes.products}>
+        {products.map((product) => (
+          <div key={product.id} className={classes.productCard}>
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcSet={product.images.desktop}
+              />
+              <source
+                media="(min-width: 768px)"
+                srcSet={product.images.tablet}
+              />
+              <img
+                src={product.images.mobile}
+                alt={product.name}
+                className={classes.productImage}
+              />
+            </picture>
+            <p>{product.name}</p>
+            <h2>{product.description}</h2>
+            <span>${product.price.toFixed(2)}</span>
+            <button onClick={() => addToCart({
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              quantity: 1
+            })}>
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,18 +1,16 @@
-import "./index.scss"
-import CartWidget from "./components/CartWidget"
-import Product from "./components/Product"
+import { CartProvider } from './context/CartContext';
+import Product from './components/Product';
+import CartWidget from './components/CartWidget';
 
 function App() {
-
   return (
-    <>
-    <section className="productPage">
-      <Product />
-     <CartWidget productsCount={0} />
-     </section>
-
-    </>
-  )
+    <CartProvider>
+      <div className="productPage">
+        <Product />
+        <CartWidget />
+      </div>
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;
