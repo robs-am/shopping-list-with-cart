@@ -18,8 +18,8 @@ interface Product {
 
 const Product: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [addedToCartProductId, setAddedToCartProductId] = useState<number | null>(null); // Estado para controlar o produto adicionado ao carrinho
-  const { cart, addToCart, removeFromCart, updateCartItemQuantity } = useCart();
+  const [addedToCartProductId, setAddedToCartProductId] = useState<number | null>(null); 
+  const { cart, addToCart,  updateCartItemQuantity } = useCart();
 
   useEffect(() => {
     fetch('/data/products.json')
