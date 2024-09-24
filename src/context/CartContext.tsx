@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 
 interface CartItem {
+  singleImage: string;
   id: number;
   name: string;
   price: number;
@@ -60,8 +61,11 @@ export const CartProvider: React.FC = ({ children }) => {
     }
   };
 
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateCartItemQuantity }}>
+
+    <CartContext.Provider value={{ cart, totalPrice, addToCart, removeFromCart, updateCartItemQuantity }}>
       {children}
     </CartContext.Provider>
   );

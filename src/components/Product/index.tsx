@@ -39,6 +39,7 @@ const Product: React.FC = () => {
       name: product.description,
       price: product.price,
       quantity: 1,
+      singleImage: product.singleImage
     });
     setAddedToCartProductId(product.id); 
   };
