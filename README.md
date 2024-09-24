@@ -6,13 +6,13 @@ Um aplicativo de carrinho de compras do mundo real construído com React/Typescr
 - React / Typescript / Vite
 - SASS / CSS Modules
 
-### Capturas de Tela (animadas)
+<!-- ### Capturas de Tela (animadas)
 
 #### Visão Desktop
 ![Desktop](https://github.com/mihailgaberov/shopping-cart-app/blob/main/screenshots/desktop.gif)
 
 #### Visão Mobile
-![Mobile](https://github.com/mihailgaberov/shopping-cart-app/blob/main/screenshots/mobile.gif)
+![Mobile](https://github.com/mihailgaberov/shopping-cart-app/blob/main/screenshots/mobile.gif) -->
 
 ## Funcionalidades do Aplicativo:
 
