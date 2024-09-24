@@ -23,7 +23,7 @@
 .orderDetails {
   display: flex;
   flex-direction: column;
-  background: #000;
+
 }
 
 .orderItem {
@@ -51,10 +51,42 @@
   align-items: center;
   gap:15px;
 
-  .orderConfirmedTitle {
-    color: #000;
-  }
+ 
   .orderConfirmedText{
     color:$rose-900;
   }
+}
+
+.orderProductTitle {
+  color: #000;
+}
+
+.orderItemContainer {
+  display: flex;
+  align-items: center;
+  gap:10px;
+
+}
+
+.orderItemQuantity {
+  color: $red;
+  font-weight: $font-weight-semibold;
+}
+
+
+.orderItemPrice {
+  color: $rose-500;
+  margin-left:15px;
+}
+
+.orderItemTotal {
+  color: $rose-900;
+  font-weight: $font-weight-bold;
+}
+
+.orderConfirmedLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
 }
