@@ -45,5 +45,5 @@ To install dependencies:
 To run the app:
 
 ```shell
-  yarn dev
+  yarn run dev
 ```
