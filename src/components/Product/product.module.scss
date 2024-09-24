@@ -22,7 +22,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 8px;
-        transition: border 0.3s ease; // Transição suave para a borda
+        transition: border 0.3s ease; 
       }
 
       .productCardInfo {
@@ -31,7 +31,7 @@
 
       &.addedToCart {
         .productImage {
-          border: 2px solid $red; // Altera a cor da borda ao adicionar ao carrinho
+          border: 2px solid $red; 
         }
       }
 
@@ -103,20 +103,20 @@
   font-size: 1rem;
   border: 1px solid $red; 
   width: 150px;
-  padding: 12px 10px; // Ajuste o padding vertical aqui
+  padding: 12px 10px; 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
   svg path {
-    fill: $red; // Define a cor inicial do SVG
+    fill: $red; 
     transition: fill 0.3s ease;
   }
 
-  // Aplica o hover ao caminho
+  
   &:hover svg path {
-    fill: #fff; // Cor do hover
+    fill: #fff; 
   }
 }
 
