@@ -15,10 +15,18 @@
 
     .productCard {
       position: relative;
+      border: 2px solid transparent;
       .productImage {
         max-width: 100%;
         height: auto;
         border-radius: 5px;
+        transition: border 0.3s ease; // Transição suave para a borda
+      }
+
+      &.addedToCart {
+        .productImage {
+          border: 2px solid $red; // Altera a cor da borda ao adicionar ao carrinho
+        }
       }
 
       h2 {
