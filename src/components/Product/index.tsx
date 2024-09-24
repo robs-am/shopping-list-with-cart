@@ -12,6 +12,7 @@ interface Product {
     tablet: string;
     desktop: string;
   };
+  singleImage: string; // Adicione a nova propriedade
 }
 
 const Product: React.FC = () => {

@@ -26,6 +26,15 @@
 
 }
 
+
+.orderProductTitle, .orderConfirmedTitle {
+  color: #000 !important;
+}
+
+.orderConfirmedText {
+  color: $rose-900;
+}
+
 .orderItem {
   display: flex;
   align-items: center;
@@ -57,9 +66,7 @@
   }
 }
 
-.orderProductTitle {
-  color: #000;
-}
+
 
 .orderItemContainer {
   display: flex;
@@ -89,4 +96,17 @@
   flex-direction: row;
   align-items: center;
   gap:10px;
+}
+
+.orderConfirmationButton {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $red;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 100%;
 }

@@ -4,7 +4,7 @@ import classes from './order-confirmation-modal.module.scss';
 interface OrderConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  cart: { id: number; name: string; price: number; quantity: number; image: string }[];
+  cart: { id: number; name: string; price: number; quantity: number; image: string; singleImage: string }[];
   totalPrice: number;
 }
 
@@ -27,17 +27,16 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ isOpen,
           {cart.map(product => (
             <div key={product.id} className={classes.orderItem}>
               <div className={classes.orderConfirmedLeft}>
-                <img src={product.image} alt={product.name} className={classes.orderItemImage} />
+                <img src={product.singleImage} alt={product.name} className={classes.orderItemImage} />
                 <div className={classes.orderItemDetails}>
                   <span className={classes.orderProductTitle}>{product.name}</span>
                   <div>
                     <span className={classes.orderItemQuantity}>{product.quantity}x</span>
                     <span className={classes.orderItemPrice}>${product.price.toFixed(2)}</span>
                   </div>
-                  
                 </div>
               </div>
-              <span className={classes.orderItemTotal} >${(product.price * product.quantity).toFixed(2)}</span>
+              <span className={classes.orderItemTotal}>${(product.price * product.quantity).toFixed(2)}</span>
             </div>
           ))}
           <div className={classes.orderTotal}>
@@ -46,7 +45,7 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ isOpen,
           </div>
         </div>
 
-        <button onClick={onClose}>Start New Order</button>
+        <button className={classes.orderConfirmationButton} onClick={onClose}>Start New Order</button>
       </div>
     </div>
   );
