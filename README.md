@@ -25,24 +25,21 @@ Um aplicativo de carrinho de compras do mundo real construído com React/Typescr
 2. A lógica do componente de quantificador permite ao usuário adicionar quantos itens desejar, mas se a contagem for reduzida a zero, o produto será removido do carrinho.
 3. O carrinho exibe o preço unitário e total de todos os itens adicionados
 
-### Demonstração
-:star: [Aplicativo de Carrinho de Compras](https://shopping-cart-app-coral.vercel.app/) :star:
 
 
+### Executando o aplicativo localmente
 
-### Running the app locally
+Para executar o aplicativo, siga estes passos:
 
-To run the app, follow these steps.
+1. Certifique-se de que o [NodeJS](http://nodejs.org/) está instalado.
+2. Instale o [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable/).
+3. A partir da pasta do projeto, execute os seguintes comandos:
 
-1. Ensure that [NodeJS](http://nodejs.org/) is installed.
-2. Install [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable/).
-3. From the project folder, execute the following commands:
-
-To install dependencies:
+Para instalar as dependências:
 ```shell
   yarn
 ```
-To run the app:
+Para executar o app:
 
 ```shell
   yarn run dev
