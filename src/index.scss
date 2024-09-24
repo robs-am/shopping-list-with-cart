@@ -22,14 +22,21 @@
   margin:0;
   padding: 0;
 }
-
 .productPage {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  align-items: start;
-  margin:4rem;
+  display: flex;
+  flex-direction: column;
 }
+
+@media (min-width: 1024px) {
+  .productPage {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin:4rem;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;

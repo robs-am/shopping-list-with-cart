@@ -35,6 +35,7 @@
       span {
         font-size: 1.2rem;
         font-weight: $font-weight-bold;
+        color: $red;
         
       }
       
@@ -68,7 +69,7 @@
     text-align: center;
     min-width: 30px; 
     display: inline-block; 
-    color:#fff;
+    color:$red;
   }
 
   .decrementButton, .incrementButton {
@@ -143,7 +144,7 @@
     text-align: center;
     min-width: 30px; 
     display: inline-block; 
-    color: #fff;
+    color: #fff !important;
   }
 
 
