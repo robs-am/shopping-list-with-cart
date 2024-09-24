@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '../../context/CartContext';
 import classes from './Product.module.scss';
-import OrderConfirmationModal from '../OrderConfirmationModal';
+
 
 interface Product {
   id: number;
@@ -13,7 +13,7 @@ interface Product {
     tablet: string;
     desktop: string;
   };
-  singleImage: string; // Adicione a nova propriedade
+  singleImage: string; 
 }
 
 const Product: React.FC = () => {
@@ -40,7 +40,7 @@ const Product: React.FC = () => {
       price: product.price,
       quantity: 1,
     });
-    setAddedToCartProductId(product.id); // Marca o produto como adicionado
+    setAddedToCartProductId(product.id); 
   };
 
   return (

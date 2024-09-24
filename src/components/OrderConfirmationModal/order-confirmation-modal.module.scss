@@ -39,7 +39,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
+  background: $rose-100;
+  padding:0 20px;
+  border-radius:6px;
 }
 
 .orderItemImage {
@@ -51,18 +54,30 @@
 
 .orderTotal {
   display: flex;
+  color:#000;
+  align-items: center;
   justify-content: space-between;
   margin-top: 10px;
 }
 
+.orderTotalValue {
+  color: #000;
+  font-weight: $font-weight-bold;
+  font-size:1.2rem;
+}
+
 .orderConfirmed {
   display: flex;
-  align-items: center;
-  gap:15px;
+  align-items: flex-start;
+  gap: 8px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  
 
  
   .orderConfirmedText{
     color:$rose-900;
+   
   }
 }
 
@@ -72,6 +87,7 @@
   display: flex;
   align-items: center;
   gap:10px;
+ 
 
 }
 

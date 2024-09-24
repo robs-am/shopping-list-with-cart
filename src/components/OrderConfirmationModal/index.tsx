@@ -13,7 +13,7 @@ interface Product {
 interface OrderConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  cart: Product[]; // Adicione a prop do carrinho
+  cart: Product[]; 
   totalPrice: number;
 }
 
@@ -50,7 +50,7 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ isOpen,
           ))}
           <div className={classes.orderTotal}>
             <span className={classes.orderTotalModal}>Order Total:</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span className={classes.orderTotalValue}>${totalPrice.toFixed(2)}</span>
           </div>
         </div>
 

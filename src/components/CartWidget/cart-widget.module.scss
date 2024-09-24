@@ -57,8 +57,8 @@
 
   .cartDetails {
     display: flex;
-    flex-direction: column; /* Mantém os itens em coluna */
-    gap: 1rem; /* Adiciona espaçamento entre os itens */
+    flex-direction: column; 
+    gap: 1rem; 
     color: black;
   }
   
@@ -66,13 +66,13 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-bottom: 1px solid #ddd; /* Linha divisória entre os itens */
+    border-bottom: 1px solid #ddd; 
   }
   
   
   .cartItemName {
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Adiciona espaçamento entre o nome e os valores */
+    margin-bottom: 0.5rem; 
   }
 
   .cartItemQuantity {
