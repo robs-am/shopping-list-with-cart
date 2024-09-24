@@ -37,44 +37,45 @@
       color: orange;
     }
 
-    .cartDetails {
-      margin-top: 10px;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
-    }
-
-    .cartItem {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .cartItemName {
-      flex: 2;
-      text-align: left;
-    }
-
-    .cartItemQuantity {
-      flex: 1;
-      text-align: center;
-    }
-
-    .cartItemPriceUnit {
-      flex: 1;
-      text-align: center;
-    }
-
-    .cartItemTotal {
-      flex: 1;
-      text-align: right;
-      font-weight: bold;
-    }
-
-    .cartTotal {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      text-align: right;
-      font-weight: bold;
-    }
   }
+
+  .cartValues {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    color: black;
+  }
+
+  .cartDetails {
+    display: flex;
+    flex-direction: column; /* Mantém os itens em coluna */
+    gap: 1rem; /* Adiciona espaçamento entre os itens */
+    color: black;
+  }
+  
+  .cartItem {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; /* Linha divisória entre os itens */
+  }
+  
+  
+  .cartItemName {
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Adiciona espaçamento entre o nome e os valores */
+  }
+  
+  .cartItemQuantity, .cartItemPriceUnit, .cartItemTotal {
+    margin-bottom: 0.25rem; /* Adiciona espaçamento entre os valores */
+  }
+  
+  .cartTotal {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+  }
+
 }

@@ -1,6 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react';
 
-
 interface CartProduct {
   id: number;
   name: string;
@@ -20,14 +19,17 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartProduct[]>([]);
 
+  // Função para adicionar um produto ao carrinho
   const addToCart = (product: CartProduct) => {
     setCart((prevCart) => {
-      const existingProduct = prevCart.find(item => item.id === product.id);
+      const existingProduct = prevCart.find((item) => item.id === product.id);
 
       if (existingProduct) {
         // Se o produto já estiver no carrinho, aumenta a quantidade
-        return prevCart.map(item =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       }
 
@@ -36,12 +38,15 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
+  // Função para remover um produto do carrinho
   const removeFromCart = (productId: number) => {
-    setCart((prevCart) => prevCart.filter(product => product.id !== productId));
+    setCart((prevCart) => prevCart.filter((product) => product.id !== productId));
   };
 
+  // Função para atualizar a quantidade de um item no carrinho
   const updateCartItemQuantity = (productId: number, quantity: number) => {
     if (quantity <= 0) {
+      // Remove o produto se a quantidade for zero ou negativa
       removeFromCart(productId);
     } else {
       setCart((prevCart) =>
@@ -53,12 +58,15 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateCartItemQuantity }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, updateCartItemQuantity }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
 
+// Hook para acessar o contexto do carrinho
 export const useCart = () => {
   const context = React.useContext(CartContext);
   if (!context) {
