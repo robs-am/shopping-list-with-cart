@@ -39,9 +39,17 @@
 
   }
 
+  .cartValuesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .cartValues {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
     color: black;
@@ -66,9 +74,23 @@
     font-weight: bold;
     margin-bottom: 0.5rem; /* Adiciona espaçamento entre o nome e os valores */
   }
+
+  .cartItemQuantity {
+    color: $red;
+  }
+
+  .cartItemPriceUnit {
+    color: $rose-50;
+  }
+
+  .cartItemTotal {
+    color: $rose-500;
+    font-weight: $font-weight-bold;
+  } 
   
   .cartItemQuantity, .cartItemPriceUnit, .cartItemTotal {
     margin-bottom: 0.25rem; /* Adiciona espaçamento entre os valores */
+    
   }
   
   .cartTotal {

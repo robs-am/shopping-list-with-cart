@@ -17,12 +17,12 @@ const CartWidget: React.FC = () => {
         {cart.map((product) => (
           <div key={product.id} className={classes.cartItem}>
             <span className={classes.cartItemName}>{product.name}</span>
-
+            <div className={classes.cartValuesContainer}>
             <div className={classes.cartValues}>
               <span className={classes.cartItemQuantity}>{product.quantity}x</span>
               <span className={classes.cartItemPriceUnit}>${product.price.toFixed(2)}</span>
               <span className={classes.cartItemTotal}>${(product.price * product.quantity).toFixed(2)}</span>
-              
+            </div>
               {/* Botão para remover o produto */}
               <button
                 className={classes.removeButton}
@@ -30,7 +30,8 @@ const CartWidget: React.FC = () => {
               >
                 X
               </button>
-            </div>
+              </div>
+           
           </div>
         ))}
 

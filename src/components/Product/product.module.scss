@@ -92,12 +92,30 @@
   border: 1px solid $red; 
   width:150px;
   padding:5px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+
+    svg path {
+      fill: $red; // Define a cor inicial do SVG
+      transition: fill 0.3s ease;
+    }
+  
+    // Aplica o hover ao caminho
+    &:hover svg path {
+      fill: #fff; // Cor do hover
+    }
 }
 
 .addToCartButton:hover {
   background: $red; 
   color: #fff; 
+  transition: fill 0.3s ease;
 }
+
+
 
 .quantityControls {
   display: flex;
