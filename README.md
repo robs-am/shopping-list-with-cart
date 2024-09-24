@@ -44,3 +44,15 @@ Para executar o app:
 ```shell
   yarn run dev
 ```
+
+## Sobre 
+
+Sou desenvolvedora há 2 anos, trabalhando com as tecnologias React e VTEX IO. Tenho formação em Design e atualmente estou cursando pós graduação em Engenharia de Software para ter uma visão macro sobre desenvolvimento. Dentre as empresas que pude contribuir, destaco:
+
+- [Tommy Hilfigher BR](https://br.tommy.com/)
+- [Yeanzah](https://www.yeanzah.com.br )
+- [Digaspi](https://www.digaspi.com.br )
+- [Liritty](https://www.liritty.com.br )
+- [Creamy](https://www.creamy.com.br)
+- [Skelt](https://www.skelt.com.br )
+- [Candide](https://www.candide.com.br)
