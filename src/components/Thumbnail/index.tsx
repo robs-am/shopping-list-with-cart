@@ -12,7 +12,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({ src, alt }) => {
     <img
       src={src}
       alt={alt}
-      className={classes.thumbnail}// Classe CSS para estilizar
+      className={classes.thumbnail}
     />
   );
 };
