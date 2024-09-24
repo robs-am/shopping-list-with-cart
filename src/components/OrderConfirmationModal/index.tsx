@@ -1,10 +1,19 @@
 import React from 'react';
 import classes from './order-confirmation-modal.module.scss';
+import Thumbnail from '../Thumbnail';
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  singleImage: string;
+}
 
 interface OrderConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  cart: { id: number; name: string; price: number; quantity: number; image: string; singleImage: string }[];
+  cart: Product[]; // Adicione a prop do carrinho
   totalPrice: number;
 }
 
@@ -21,13 +30,13 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ isOpen,
           </svg>
           <h2 className={classes.orderConfirmedTitle}>Order Confirmed</h2>
         </div>
-        <span className={classes.orderConfirmedText}>We hope your food!</span>
+        <span className={classes.orderConfirmedText}>We hope you enjoy your food!</span>
 
         <div className={classes.orderDetails}>
           {cart.map(product => (
             <div key={product.id} className={classes.orderItem}>
               <div className={classes.orderConfirmedLeft}>
-                <img src={product.singleImage} alt={product.name} className={classes.orderItemImage} />
+                <Thumbnail src={product.singleImage} alt={product.name} />
                 <div className={classes.orderItemDetails}>
                   <span className={classes.orderProductTitle}>{product.name}</span>
                   <div>

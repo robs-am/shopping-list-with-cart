@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCart } from '../../context/CartContext';
 import classes from './Product.module.scss';
+import OrderConfirmationModal from '../OrderConfirmationModal';
 
 interface Product {
   id: number;
@@ -52,9 +53,8 @@ const Product: React.FC = () => {
           return (
             <div
               key={product.id}
-              className={`${classes.productCard} ${
-                addedToCartProductId === product.id ? classes.addedToCart : ''
-              }`}
+              className={`${classes.productCard} ${addedToCartProductId === product.id ? classes.addedToCart : ''
+                }`}
             >
               <picture>
                 <source media="(min-width: 1024px)" srcSet={product.images.desktop} />
@@ -65,10 +65,11 @@ const Product: React.FC = () => {
                   className={classes.productImage}
                 />
               </picture>
-              <p>{product.name}</p>
-              <h2>{product.description}</h2>
-              <span>${product.price.toFixed(2)}</span>
-
+              <div className={classes.productCardInfo}>
+                <p>{product.name}</p>
+                <h2>{product.description}</h2>
+                <span>${product.price.toFixed(2)}</span>
+              </div>
               <div className={classes.quantityControls}>
                 {quantity > 0 ? (
                   <>
@@ -105,7 +106,7 @@ const Product: React.FC = () => {
                 ) : (
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className={classes.addToCartButton}
+                    className={`${classes.addToCartButton} customAddToCartButton`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,11 +127,13 @@ const Product: React.FC = () => {
                     </svg>{' '}
                     Add to Cart
                   </button>
+                  
                 )}
               </div>
             </div>
           );
         })}
+        
       </div>
     </div>
   );

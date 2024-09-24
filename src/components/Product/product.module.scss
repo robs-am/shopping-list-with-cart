@@ -8,6 +8,7 @@
     margin-bottom: 2.5rem;
     color: $rose-900;
   }
+  
   .products {
     display: flex;
     flex-wrap: wrap;
@@ -16,11 +17,16 @@
     .productCard {
       position: relative;
       border: 2px solid transparent;
+
       .productImage {
         max-width: 100%;
         height: auto;
         border-radius: 8px;
         transition: border 0.3s ease; // Transição suave para a borda
+      }
+
+      .productCardInfo {
+        margin-top: 1rem;
       }
 
       &.addedToCart {
@@ -31,7 +37,6 @@
 
       h2 {
         font-size: 1.5rem;
-
         color: $rose-900;
       }
 
@@ -44,9 +49,7 @@
         font-size: 1.2rem;
         font-weight: $font-weight-bold;
         color: $red;
-        
       }
-      
     }
   }
 }
@@ -57,15 +60,12 @@
   border: 1px solid $red;
   background: $red;
   border-radius: 20px;
-  padding:5px;
-
-
+  padding: 5px;
 
   button {
-    
-    background:  $red;
-    border:1px solid #fff;
-    border-radius:50%;
+    background: $red;
+    border: 1px solid #fff;
+    border-radius: 50%;
     padding: 5px;
     font-size: 1rem;
     cursor: pointer;
@@ -79,14 +79,15 @@
     text-align: center;
     min-width: 30px; 
     display: inline-block; 
-    color:$red;
+    color: $red;
   }
 
-  .decrementButton, .incrementButton {
+  .decrementButton,
+  .incrementButton {
     color: #fff;
     background-color: $red;
-    border:1px solid #fff;
-    border-radius:50%;
+    border: 1px solid #fff;
+    border-radius: 50%;
   }
 }
 
@@ -97,27 +98,26 @@
   transform: translateX(-50%);
   background-color: white;
   color: #000 !important;
-  border-radius:12px !important;
+  border-radius: 12px !important;
   cursor: pointer;
   font-size: 1rem;
   border: 1px solid $red; 
-  width:150px;
-  padding: 10px;
+  width: 150px;
+  padding: 12px 10px; // Ajuste o padding vertical aqui
   display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-    svg path {
-      fill: $red; // Define a cor inicial do SVG
-      transition: fill 0.3s ease;
-    }
-  
-    // Aplica o hover ao caminho
-    &:hover svg path {
-      fill: #fff; // Cor do hover
-    }
+  svg path {
+    fill: $red; // Define a cor inicial do SVG
+    transition: fill 0.3s ease;
+  }
+
+  // Aplica o hover ao caminho
+  &:hover svg path {
+    fill: #fff; // Cor do hover
+  }
 }
 
 .addToCartButton:hover {
@@ -125,8 +125,6 @@
   color: #fff !important; 
   transition: fill 0.3s ease;
 }
-
-
 
 .quantityControls {
   display: flex;
@@ -137,9 +135,8 @@
   transform: translateX(-50%); 
 
   button {
-    background-color:white; 
+    background-color: white; 
     color: $red;
-    border:1px solid $red;
     border: 1px solid $red;
     padding: 5px 10px;
     font-size: 1rem;
@@ -156,17 +153,15 @@
     display: inline-block; 
     color: #fff !important;
   }
-
-
 }
-
 
 @media (min-width: 1024px) {
   .productCard {
     flex: 0 0 calc(33.33% - 10px);
   }
 
-  .productCard .addToCartButton, .quantityControls { 
+  .productCard .addToCartButton,
+  .quantityControls { 
     position: absolute;
     bottom: 17%; 
   }
