@@ -1,80 +1,80 @@
 @import '../../styles/variables.scss';
 
-h2 {
-       
-  color: $red;
-  font-weight: $font-weight-bold
-
-}
-
-.container {
-
-  display: flex;
-  border: none;
-  background: none;
-  cursor: pointer;
-  align-items: center;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  background-color: #fff;
-
-  &:hover {
-    outline: 1px solid white;
+.cartCotainer {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  h2 {
+    color: $red;
+    font-weight: $font-weight-bold;
   }
 
-  
-  .shoppingCart {
-    height: 3em;
-    padding: 1.5rem .4rem;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-
-  .productsCount {
-    z-index: 1;
-    font-size: 2em;
-    top: 38px;
-    color: orange;
-  }
-
-  .cartDetails {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-  }
-  
-  .cartItem {
+  .container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    background-color: #fff;
+
+    &:hover {
+      outline: 1px solid white;
+    }
+
+    .shoppingCart {
+      height: 3em;
+      padding: 1.5rem 0.4rem;
+      will-change: filter;
+      transition: filter 300ms;
+    }
+
+    .productsCount {
+      z-index: 1;
+      font-size: 2em;
+      top: 38px;
+      color: orange;
+    }
+
+    .cartDetails {
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    .cartItem {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .cartItemName {
+      flex: 2;
+      text-align: left;
+    }
+
+    .cartItemQuantity {
+      flex: 1;
+      text-align: center;
+    }
+
+    .cartItemPriceUnit {
+      flex: 1;
+      text-align: center;
+    }
+
+    .cartItemTotal {
+      flex: 1;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .cartTotal {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      text-align: right;
+      font-weight: bold;
+    }
   }
-  
-  .cartItemName {
-    flex: 2;
-    text-align: left;
-  }
-  
-  .cartItemQuantity {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .cartItemPriceUnit {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .cartItemTotal {
-    flex: 1;
-    text-align: right;
-    font-weight: bold;
-  }
-  
-  .cartTotal {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    text-align: right;
-    font-weight: bold;
-  }
-  
 }

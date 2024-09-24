@@ -12,7 +12,7 @@ const CartWidget: React.FC = () => {
   const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
 
   return (
-    <div>
+    <div className={classes.cartCotainer}>
       <h2 className={classes.cartCounter}>Your Cart ({totalItems})</h2>
 
       <div className={classes.cartDetails}>

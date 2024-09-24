@@ -50,8 +50,9 @@ const Product: React.FC = () => {
                   className={classes.productImage}
                 />
               </picture>
-              <h2>{product.description}</h2>
               <p>{product.name}</p>
+              <h2>{product.description}</h2>
+              
               <span>${product.price.toFixed(2)}</span>
 
               <div className={classes.quantityControls}>
@@ -63,7 +64,7 @@ const Product: React.FC = () => {
                     >
                       -
                     </button>
-                    <span>{quantity}</span>
+                    <span className={classes.productQuantity}>{quantity}</span>
                     <button
                       onClick={() => updateCartItemQuantity(product.id, quantity + 1)}
                       className={classes.incrementButton}
@@ -76,7 +77,7 @@ const Product: React.FC = () => {
                     onClick={() =>
                       addToCart({
                         id: product.id,
-                        name: product.name,
+                        name: product.description,
                         price: product.price,
                         quantity: 1
                       })
