@@ -23,6 +23,9 @@
 .orderDetails {
   display: flex;
   flex-direction: column;
+  background: $rose-100;
+  border-radius:6px;
+  margin:20px 0;
 
 }
 
@@ -57,7 +60,7 @@
   color:#000;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  margin: 15px;
 }
 
 .orderTotalValue {
