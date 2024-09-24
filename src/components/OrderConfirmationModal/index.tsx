@@ -40,7 +40,7 @@ const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ isOpen,
             </div>
           ))}
           <div className={classes.orderTotal}>
-            <span>Order Total:</span>
+            <span className={classes.orderTotalModal}>Order Total:</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
         </div>
