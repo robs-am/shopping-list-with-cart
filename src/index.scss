@@ -25,6 +25,8 @@
 .productPage {
   display: flex;
   flex-direction: column;
+  margin:3rem;
+  gap: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -34,17 +36,11 @@
     gap: 2rem;
     align-items: start;
     margin:4rem;
+   
   }
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
@@ -71,13 +67,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {

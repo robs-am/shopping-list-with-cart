@@ -117,4 +117,14 @@
 
   }
 
+  .carbonFree {
+    color: $rose-900;
+    background: $rose-100;
+    padding: 15px 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+  }
+
 }
