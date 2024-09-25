@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "author": "Roberta Amaro",
+  "homepage": "https://robs-am.github.io/shopping-list-with-cart/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
