@@ -47,7 +47,7 @@ Para executar o app:
 
 ## Sobre 
 
-Sou desenvolvedora há 2 anos, trabalhando com as tecnologias React e VTEX IO. Tenho formação em Design e atualmente estou cursando pós graduação em Engenharia de Software para ter uma visão macro sobre desenvolvimento. Dentre as empresas que pude contribuir, destaco:
+Sou desenvolvedora há 2 anos, trabalhando com as tecnologias React, Typescript e VTEX. Tenho formação em Design e atualmente estou cursando pós graduação em Engenharia de Software para ter uma visão macro sobre desenvolvimento. Dentre as empresas que pude contribuir, destaco:
 
 - [Tommy Hilfigher BR](https://br.tommy.com/)
 - [Yeanzah](https://www.yeanzah.com.br )
