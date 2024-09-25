@@ -1,7 +1,6 @@
-// Thumbnail.tsx
-import React from 'react';
-import classes from './thumbnail.module.scss'; // Importe o arquivo de estilos
 
+import React from 'react';
+import classes from './thumbnail.module.scss'; 
 interface ThumbnailProps {
   src: string;
   alt: string;
